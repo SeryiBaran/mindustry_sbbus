@@ -29,6 +29,8 @@
 
 ![](./panel.png)
 
+s1:
+
 ![](./panel_s1.png)
 
 ```
@@ -50,6 +52,8 @@ jump 1 lessThan p temp2
 
 ![](./reader.png)
 
+s1:
+
 ![](./reader_s1.png)
 
 ```
@@ -68,6 +72,8 @@ printflush message1
 ## Передатчик
 
 ![](./wire.png)
+
+s1:
 
 ![](./wire_s1.png)
 
@@ -90,12 +96,20 @@ jump 1 lessThan p 32
 
 ![](./client.png)
 
+s1:
+
 ![](./client_s1.png)
+
+s2:
 
 ![](./client_s2.png)
 
+s3:
+
+![](./client_s3.png)
+
 ```
-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
+bXNjaAF4nGNgZ2BhZmDJS8xNZRC6MOvC7gs7Lmy9sPdik0Kwk1NpMQN3SmpxclFmQUlmfh4DAwNbTmJSak4xA0t0bmUsGwN/Tn56ZrJuQVF+cmpxcX4RAxuQKEktYmDPBfIT01MZeCEqUjKLC3ISKxm4c1Nz84sqdZNTc3IY+HMzk4vykXQzMHAxgAAfAwPjxYo5tVOj824biLjMdJf/oLWDkfnZ1cUv4+t2CUQl5YhtWTFJhElf35o7OJZ9qYnWF+Uu46bzsn016keub89oe9H85s+HJH+vZ79Tmiad/9wcu9F3j+/82/uXn9bItvzx5fX5JXefZ3/6ZzFrwlvPV/v41dwqZ1zVDbBe/Ntpddpb4QtxPpfUlyfr8JhIX2G08HPsT5/tk7jihsMBga8B/+bMOjojZLfTnQ0SjWqzvyQs907MuNmQcflm+9J/x9eoH5HazRO9Yn4Er+PazZWBL+o3yW3sq3zH4FC4pWXC8c19af8X9R8sW9rtrHZEdnmBUfXbOfunqfHtavqwmD/N/tfRyEcrtE0aH7Nf3Pd5+kX/7guiy+MOesY0+502XmrxK8uUvak3YE7N1lkMC/0K3n3lmrstaqHFn6pWP+mtATL1e5vULnA/epDNs0eDrfCB6aHWswp+ux1PrJA6EmnOUXGX91GHtAf3Kcc5Bc0N5rcc5xQ1bzC/7TinrPvCdiCvnPtjonUHc/5Fjn+X+159s2yf7PB2xRW9J8a6n5OKPMuOWe7KfbfJlPX9EskvF2fGHQufvWvzrk5++evvTJ+U/3sd/nOhwKPAmsf/1+7ZsV/X487To9/vHZM5E/r0d/XHp+u9bTray1WPx8xlYARGLRMrKIKZgJiZhZGBxVDX0AwozggSYQJSIEFWQ3NdYyMGZiBkBIkygUU3XJhxYe+FLcDkuevChotNF/ZdbIAkUT2uC/Mv7APK7Lqw+2LfxfYLGy7sBMpvVTBUuLD/YgNQYduFrRcbLzaCtVzYpXCxA2jI3gtbcWo0xqWxGSy+4cImoIZ+YDbZc7H7wh6gMFBRE0gDUD+QBZTecGGPHgML2AsMrCAGMEUz5FXMSU5JSNDQ8vL1CdTw0tU7qxno4Xf2pGGIwYNTWmd1AwzCTpzWL9TV8T3T6CldsFREdZq2yvMlamKaEhoSM2cxeRq4THMQavNa8nSKWLrGkhQx8ScqYVJFjLmpSQmst7/+t59wmHHyz////9szbHuvp8QAspoJZHFBxRzd3ou8zQY8LnP562yO9jJIl3ToTRDivrXLU6T9Kzfngsk5J6vqnnec8NEyUotb8sq6rrDvjGuNg+DtLUliVzmVz2temyQi9NdbNebF2R7bOUY1HGev985/e10s5My81f1vv72QP7b22sWCqO/2O5ldjLVkGQBLzvt7
 ```
 
 s1
@@ -173,6 +187,16 @@ write result cell1 0
 ```
 
 s2
+
+```
+read result cell1 0
+jump 3 notEqual result 0
+draw clear 0 255 0 0 0 0
+draw clear 255 0 0 0 0 0
+drawflush display1
+```
+
+s3
 
 ```
 set p 1
