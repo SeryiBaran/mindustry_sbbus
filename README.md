@@ -2,6 +2,8 @@
 
 Шина переключателей на 32 канала для Mindustry 7+. Проверено и работает в кампании и на сервере.
 
+Также существует **мини версия на 4 канала**. Информация в самом низу этой страницы.
+
 - Установите панель
 - Подключите шину состоящую из ячейка_панели-ячейка-передатчик-ячейка-передатчик-ячейка...
 - Подключайте к ячейкам модули вроде считывателя и клиента.
@@ -165,6 +167,80 @@ jump 64 notEqual config2 @blast-compound
 set address 30
 jump 66 notEqual config2 @pyratite
 set address 31
+read result cell2 address
+control enabled switch1 result 0 0 0
+write result cell1 0
+```
+
+s2
+
+```
+set p 1
+getlink link p
+read result cell1 0
+control enabled link result 0 0 0
+op add p p 1
+jump 1 lessThan p @links
+```
+
+## Мини версия на 4 канала (SBBus Mini)
+
+![](./mini__example.png)
+
+### Панель
+
+```
+bXNjaAF4nGNgYWBmZmDJS8xNZRC/MP/Chgt7L2y9sPtij0Kwk1NpsYJvZl4mA3dKanFyUWZBSWZ+HgMDA1tOYlJqTjEDS3RuZSwrA1txeWZJcgaQzi8qSS1i4M/NTC7K1y0oyk9OLQaKMbDnAunE9FQG7tzU3PyiSt3k1JwcoDncDCDAxcjACKQYWUEcJhDmAxIzK+a49t3mbTbgcfUVXDVF08bJ2ZrBuYRRLsxT2kmEfaPX8largCP9S4vfb3zKw7DPR9D23pXuRabvmm9/6Dr5UcJAwN/sXaLrujyd0qwvJ4KbJ7KtTw1fbTnDo/32pK1V+pMjy+danPzlnOW15pLntC+2vEGLVJ+lx1sbmjuezGcVuW14gnWdzewb36QSYvk0FK0f8k0Xlpuw/jT/oiyPfJBboa5mBLuakYEZiJlYGBl0UQLwYvOF/RcbgAKbLuwGCu29sONiP1Ko6kG8CzaICWwQyPPMUBFmsAgwZoAYKA4Ah0+ItQ==
+```
+
+```
+set p 0
+getlink link p
+sensor result link @enabled
+op sub temp1 p 1
+write result cell1 temp1
+op add p p 1
+op add temp2 @links 1
+jump 1 lessThan p temp2
+```
+
+### Считыватель
+
+Остался таким же.
+
+### Передатчик
+
+```
+bXNjaAF4nGNgZGBiZmDJS8xNZZC/MP/C1osNF7Ze2HJhw8Wmi+0XdlzYpRDs5FRarOCbmZfJwJ2SWpxclFlQkpmfx8DAwJaTmJSaU8zAEp1bGcvEwJ+bmVyUr1tQlJ+cWlycX8TAngukE9NTgUqZGECAD4iDK+YkpyQkcGj56QZqBBg80PLy9QnU8NLVO6sZ6OF39qRhiMYDLf1TOp6uYiZMXM/ENVSWLWH4KqIhUZQ69RmTZuucK48eTeg5YrNgBqf4hRA2hh8bpJ4xMAINZmRhZCgm4AM9LqCCfUDJXRd2X+wDSV9surBVAUg1Ahn7gAJ7QTp0FC5sB+kHmrNH4cJ+bDo2Xey+2AqS0GMAAKb6kYo=
+```
+
+```
+set p 0
+read result cell1 p
+write result cell2 p
+op add p p 1
+jump 1 lessThan p 4
+```
+
+
+### Клиент
+
+```
+bXNjaAF4nGNgYmBmZmDJS8xNZRC/MOvC7gs7Lmy9sPdik0Kwk1NpsYJvZl4mA3dKanFyUWZBSWZ+HgMDA1tOYlJqTjEDS3RuZSwLA39uZnJRvm5BUX5yanFxfhEDG5AoSS1iYM8F8hPTUxm4c1Nz84sqdZNTc3KA+lkZQIAPiNdWzEm9cJbrkAEPw4MwgYX+E1dvL3U+Mltcfsm6wtkpubnW3365vT5gWHTy/HQRrdYJx1v0fnKsLe9fyOxn7MZ7PWj1cxO2jAM/a6p928SOPRYwWNUi2bNVMLhp1YPLYsJSuxftuvB5Wt8MX3e1pVPXd+/PqRX3fdHeo31vxQl9pufCqRkTV8SldYkXf2F5cWbuBadZ7Xe+VR28qn5F5ueT//ueLRNIUv9238uj7/D79Tv077On5JxjYAQ6mRHseiYQZmFkmIUjyPS4Lsy/sO/Clgu7Luy+2Hex/cKGCzsvNl3YqmCocGH/xYYL+y62Xdh6sfFiI5DVoHBhl8LFDqApey9sxanxYjNY44YLm4AS/UAL9wCVbQVpNcJi5MVmPZBbIaGcUzFHt/cub4MCT8vDg9P9CpVfsPE9ZNLorRflOPqX1XT6lunPfs01PbaiyPGQg7b4zcOd5Sqn3tgYvdZl5e7meZHZufCJxoMHaYn/Xf/73HcxPFgZX9lbcSc8ViBsrpn4q9wcea+t12a9W2r2m8HWVkOBgRloLdBiADvMFwY=
+```
+
+s1
+
+```
+sensor config sorter1 @config
+jump 3 notEqual config @copper
+set address 0
+jump 5 notEqual config @lead
+set address 1
+jump 7 notEqual config @metaglass
+set address 2
+jump 9 notEqual config @graphite
+set address 3
 read result cell2 address
 control enabled switch1 result 0 0 0
 write result cell1 0
