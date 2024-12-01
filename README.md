@@ -1,6 +1,6 @@
 # SBBus
 
-Шина переключателей на 32 канала для Mindustry 7+. Проверено и работает в кампании и на сервере.
+Шина переключателей для Mindustry 7+. Проверено и работает в кампании и на сервере.
 
 Также существует быстрая **мини версия на 4 канала**. Информация в самом низу этой страницы.
 
@@ -9,6 +9,8 @@
 - Подключайте к ячейкам модули вроде считывателя и клиента.
 
 - 1 передатчик может транслировать данные на несколько ячеек
+
+Стандартная шина - SBBus - 32 канала - 2 блока по 16 каналов.
 
 ## Пример
 
@@ -232,6 +234,8 @@ jump 1 lessThan p @links
 
 ## Мини версия на 4 канала (SBBus Mini)
 
+Версия SBBus - SBBus Mini на 4 канала.
+
 По быстрой версии шины SBBus (SBBus Mini) сигнал проходит путь в 22 передатчика (повторителя) за 2 секунды.
 
 ![](./mini__example.png)
@@ -312,7 +316,7 @@ jump 1 lessThan p @links
 
 ## SBBus 256
 
-256 каналов.
+Версия SBBus - SBBus 256 - на 16 блоков по 16 каналов. Итого 256 каналов.
 
 ![](./256__example.png)
 
@@ -959,103 +963,9 @@ jump 1 lessThan p @links
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## SBBus 512
 
-512 каналов.
+Версия SBBus - SBBus 512 - на 32 блока по 16 каналов. Итого 512 каналов.
 
 ![](./512__example.png)
 
@@ -2258,4 +2168,42 @@ read result cell1 0
 control enabled link result 0 0 0
 op add p p 1
 jump 1 lessThan p @links
+```
+
+## dev
+
+mlogjs набросок
+
+```
+const config1 = getBuilding("sorter1").config
+const config2 = getBuilding("sorter2").config
+
+let address = -999
+
+switch (config1) {
+    case Items.copper:
+        address = 0
+    case Items.lead:
+        address = 1
+    case Items.metaglass:
+        address = 2
+    case Items.graphite:
+        address = 3
+}
+```
+
+```
+sensor config1:1:6 sorter1 @config
+sensor config2:2:6 sorter2 @config
+set address:4:4 -999
+jump 8 strictEqual config1:1:6 @copper
+jump 9 strictEqual config1:1:6 @lead
+jump 10 strictEqual config1:1:6 @metaglass
+jump 11 strictEqual config1:1:6 @graphite
+jump 12 always
+set address:4:4 0
+set address:4:4 1
+set address:4:4 2
+set address:4:4 3
+end
 ```
