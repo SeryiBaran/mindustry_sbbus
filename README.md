@@ -78,15 +78,19 @@ s1:
 ![](./wire_s1.png)
 
 ```
-bXNjaAF4nGNgYmBmZmDJS8xNZZC6MP/C1osNF7Ze2HJhw8Wmi+0XdlzYpRDs5FRazMCdklqcXJRZUJKZn8fAwMCWk5iUmlPMwBKdWxnLxMCfk5+emaxbUJSfnFpcnF/EwJ4LpBPTU4FKmRhAgA+IQyrmJKckJHDo+ekGagQYPNDy8vUJ1PDS1TurGejhd/akYYjGAy39UzqermImTFzPxDVUli1h+CqiIVGUOvUZk2brnCuPHk3oOWKzYMZGQfELEWwMohLSEgyMIDtYGBnycLtejwsotw8ovuvC7ot9IJmLTRe2KgCpRiBjH1BgL0ixjsKF7SCtQCP2KFzYj03HpovdF1tBEnoMALHpjJc=
+bXNjaAF4nGNgYmBmZmDJS8xNZZC6MP/C1osNF7Ze2HJhw8Wmi+0XdlzYpRDs5FRazMCdklqcXJRZUJKZn8fAwMCWk5iUmlPMwBKdWxnLxMCfk5+emaxbUJSfnFpcnF/EwJ4LpBPTU4FKmRhAgA+IiyrmuPbd5TxswNNyN9y3UPnKWSZJJe4ZXk/8PVufXjDcVZTkrNFU/ePHjsvKLR+KNQ1cpJa+2LM+IzHE8LFnpJByt3zUB7GrHMvy53Xf2fDTR945yW2vx+mNklYrdvAH39K/tjfv8K0o40f3Db5sPfGySnOOMZveEgZGkAtYGBnycPtNjwsotw8ovuvC7ot9IJmLTRe2KgCpRiBjH1BgL0ixjsKF7SCtQCP2KFzYj03HpovdF1tBEnoMAJy8pQ0=
 ```
 
 ```
-set p 0
-read result cell1 p
-write result cell2 p
+set p 1
+getlink link p
+set d 0
+read result cell1 d
+write result link d
+op add d d 1
+jump 3 lessThan d 32
 op add p p 1
-jump 1 lessThan p 32
+jump 1 lessThan p @links
 ```
 
 
@@ -238,15 +242,19 @@ jump 1 lessThan p temp2
 ### Передатчик
 
 ```
-bXNjaAF4nGNgZGBiZmDJS8xNZZC/MP/C1osNF7Ze2HJhw8Wmi+0XdlzYpRDs5FRarOCbmZfJwJ2SWpxclFlQkpmfx8DAwJaTmJSaU8zAEp1bGcvEwJ+bmVyUr1tQlJ+cWlycX8TAngukE9NTgUqZGECAD4iDK+YkpyQkcGj56QZqBBg80PLy9QnU8NLVO6sZ6OF39qRhiMYDLf1TOp6uYiZMXM/ENVSWLWH4KqIhUZQ69RmTZuucK48eTeg5YrNgBqf4hRA2hh8bpJ4xMAINZmRhZCgm4AM9LqCCfUDJXRd2X+wDSV9surBVAUg1Ahn7gAJ7QTp0FC5sB+kHmrNH4cJ+bDo2Xey+2AqS0GMAAKb6kYo=
+bXNjaAF4nGNgZGBiZmDJS8xNZZC/MP/C1osNF7Ze2HJhw8Wmi+0XdlzYpRDs5FRarOCbmZfJwJ2SWpxclFlQkpmfx8DAwJaTmJSaU8zAEp1bGcvEwJ+bmVyUr1tQlJ+cWlycX8TAngukE9NTgUqZGECAD4iLKua49l3kbTbgcbkc71+obLKI2YCF22Urq4jzWosV0SVpHiotOnePX748V16xZb93o+IlDdfnuY7ci7sk/U9Nkoisud60fYWbwd9PMU+azqb/khIyfuX6683qhc1dvw2Wvk1Z773B7FpLBXfbvm8Wc+VbmdnP6BUxMALtZWRhZCgm4EE9LqCCfUDJXRd2X+wDSV9surBVAUg1Ahn7gAJ7QTp0FC5sB+kHmrNH4cJ+bDo2Xey+2AqS0GMAAH73pe8=
 ```
 
 ```
-set p 0
-read result cell1 p
-write result cell2 p
+set p 1
+getlink link p
+set d 0
+read result cell1 d
+write result link d
+op add d d 1
+jump 3 lessThan d 4
 op add p p 1
-jump 1 lessThan p 4
+jump 1 lessThan p @links
 ```
 
 
