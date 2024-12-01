@@ -8,6 +8,8 @@
 - Подключите шину состоящую из ячейка_панели-ячейка-передатчик-ячейка-передатчик-ячейка...
 - Подключайте к ячейкам модули вроде считывателя и клиента.
 
+- 1 передатчик может транслировать данные на несколько ячеек
+
 ## Пример
 
 ![](./example.png)
@@ -362,7 +364,7 @@ jump 1 lessThan p @links
 ### Клиент
 
 ```
-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
+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
 ```
 
 s1
@@ -914,6 +916,1324 @@ drawflush display1
 ```
 
 s3
+
+```
+set p 1
+getlink link p
+read result cell1 0
+control enabled link result 0 0 0
+op add p p 1
+jump 1 lessThan p @links
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## SBBus 512
+
+512 каналов.
+
+![](./512__example.png)
+
+генерация клиента
+
+```
+for (let j = 0; j < 16; j++) {
+  console.log(['copper', 'lead', 'metaglass', 'graphite', 'sand', 'coal', 'titanium', 'thorium', 'scrap', 'silicon', 'plastanium', 'phase-fabric', 'surge-alloy', 'spore-pod', 'blast-compound', 'pyratite'].map((elem, i) => `jump ${35+j*16*2+(i*2)} notEqual config${j+1} @${elem}__LLOLOLO__set address ${j*16+i}`).join('__LLOLOLO__')) // ЗАМЕНИТЬ __LLOLOLO__ на переаод строки
+}
+
+
+for (let j = 16; j < 32; j++) {
+  console.log(['copper', 'lead', 'metaglass', 'graphite', 'sand', 'coal', 'titanium', 'thorium', 'scrap', 'silicon', 'plastanium', 'phase-fabric', 'surge-alloy', 'spore-pod', 'blast-compound', 'pyratite'].map((elem, i) => `jump ${35+(j-16)*16*2+(i*2)} notEqual config${j+1} @${elem}__LLOLOLO__set address ${j*16+i}`).join('__LLOLOLO__')) // ЗАМЕНИТЬ __LLOLOLO__ на переаод строки
+}
+```
+
+## Панель
+
+```
+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
+```
+
+
+```
+set p 0
+getlink link p
+sensor result link @enabled
+op sub temp1 p 1
+write result bank1 temp1
+op add p p 1
+op add temp2 @links 1
+jump 1 lessThan p temp2
+
+```
+
+### Считыватель
+
+```
+bXNjaAF4nGNgYWBmZmDJS8xNZVC4sPBi+4UdF5sudl/YdGHDxaYLWy/svtijEOzkVFqsYGpoxMCdklqcXJRZUJKZn8fAwMCWk5iUmlPMwBKdWxnLzMCbk1lYmpmiW5xfWpScysCem1pcnJieysCfUVmQWqRbUJSfDBTJLwLqZGEAAVag5QyMQAYjCyPjBMNRMKgAOGaYWBgZFAmlCz0GJiBk5AOqT6+YY9p7kfeQAY/LXfsnmnksTVd8JRgW75gyiU3b7xq7DmP88urvS2Z3vHh0K9GiKPhkxqvFJTFL7YR61t7N/u9YJ6XyvIC3c/tG9wUrfldOlcrxW75+/5SH2t8inizrfJy86PD+ffEu8vMrVesZAMgqvu8=
+```
+
+```
+set p 0
+read result bank1 p
+print result
+op add p p 1
+jump 1 lessThan p 512
+printflush message1
+```
+
+### Передатчик
+
+```
+bXNjaAF4nGNgYWBmZmDJS8xNZZC7MP/C1osNF7Ze2HJhw8Wmi+0XdlzYpRDs5FRarGBqaMTAnZJanFyUWVCSmZ/HwMDAlpOYlJpTzMASnVsZy8zAm5NZWJqZolucX1qUnMrAnptaXJyYnsrAn1FZkFqkW1CUnwwUyS8C6mRmAAFWoNUMjEAGEwsjQxF+u/W4gPL7gHK7Luy+2AeSvdh0YasCkGoEMvYBBfaCNOgoXNgO0g40Zo/Chf3YdGy62H2xFSShx8AEhIx8QAeUVMxx7bvIediAx2VuvG+hcgjv3/cCsQdclTwfWx0qeiElu3OjosjBWhu5ciknjvjrXMyXl5jqVrryL25jFdeSYnWt9Rc9PyO87cJynVD/G7ULzwq4Xuh7uXU/r/KkXfbPZvCXPX69MmL+a67/oof3mlrK2rfKx+rpXWEAAKFjppk=
+```
+
+```
+set p 1
+getlink link p
+set d 0
+read result bank1 d
+write result link d
+op add d d 1
+jump 3 lessThan d 512
+op add p p 1
+jump 1 lessThan p @links
+```
+
+### Клиент
+
+```
+bXNjaAF4nHVYeTjU/deeYezZhZRtMNaZkCkUIdvYxr5FElPW7FlKdmYSGssUWYZnrEmaZ5TsS2XPzCApSwuhhWzZeb/yvL/f88f7uq65zufc9/mec+4Pruv+DogVxM4Iglx398eABKl51EZqPbWO2kyLl7DR0wsLkUCqqII4PDEhHsHegaHeAddBIBCzn/sVjF8ICHLRP9KVFcQcEhAcigkGcfp5B4V5e8JDAsKCPTAgFn9MSIj7NQyI2ysyEBMMDwwO8ACQgGAQt7+3R3DAvwAOf4x/QHAk3APj5wfi9gu45u3xL5bzEPD0Dgn0c48E5suD/vsDPgwMh4GR6X8xCBMExPgHZoKAQf3/hzBV5GkEO7WI2kKlUBuojbR0Wgq1lvqCFk+tk1CVoD4FiEbaXRqWWk9LkqC20mKpLbRkah0tjhYHnGKptRLUBokDmtpMrft/OwHlscBYClBUT33xf/T50yXhD15LJQNPZwDlTbRUahMAA0XxBw8AzYATQNdSmxD/VQ0+PIAP5YMBwX80M3GBQOygiPykhxPBUgZ8Sa8Ynh5fEfgMPkHbtJmwCx//keB17srr6teqmScgg1ypz9O+Vzi8yRoQNQi3ysoNSx4sz2gd8/PRWDz5YaIcXb672dTs+zhafVF8sGvo997GxlDntbE3+7fGijy3v3xorY+u3n263PVW/HjMj92nK12l5xE7S+/EM3aWhsXRO0E/MxRjxre+vBbvi2050sMx+lqmgJ9ikTnJlieLWof8zCLFxDOb0HV1OWTmi4m4zFArqiFqS86LJF1gG2qdZaGgWTkm2nSpg5R1x8KHjjKQRc6TSrLyQq1pKHPNyjkS7D9lKFnOAgopK9nCmY66IOs/Pz046Fb0zP5ZRldfa0zkpGhNzMn+k+e0fqLF9/YXM4pbtfGj3NsT5Q/vl7aOd/e5rd+fmO1cuNUyVhxw1qU7fbB8Yuh+St/e1YQ1TsPT+eEZz2PEFk+uOIenPLxvGpNrFxVZ/0NMvLB10k94m9n+50zf0ure7vzP3Q4franBV5NNrtsfKNSUzs6m+sjWtXWnx+iQKRSYnnLRsQftdmN2dwLdmFGesv3BNbo3aST6tnb05NRPrpQvAc8fbhGNnHeGliitNzVbGs2ih6W+t3WN3llYyHArSh9cTEZEf5P6+TKgfGJmtyBTe0tlVbcSRkLfPiJqCbujvS6fXZOrQOKOYS/1hXLMfynSo5mEFkf/4j+5UaBM4b51ZcYa41V0AyNzyturKAzDZOTvJR5UOsIX5FUUiGGS/UbVnunttRgpjn6fllNYeWG76Ti8qOrCdttx3/Y7mtUZLTQL5TBH8RiOaOUqru+d9yUpbdhz/b+i5CZVox94oCsmyfsBAn5sScetsGkRBQ67FtC35YgOnzKRp3fg1ddhfL7v2qvSFZbAi0OZODOX2gS7grmXKgGYunK9oH5Xp91c6xNZDu8ZFY52zeWsuRsoppsSKaJmSumpl4uPWYx8rmcWfP9RH55+lmdz4FSdwHgCa1BhRelHqH52SAkhXpFH480xb/dV/OdzVqbt41J9Gg6m7cNSVA0b0/ZaqcGDrFqKFllFiI80ql05WifQr7VcMOtzTGXTOKKwEvNyTmpqs8rZ0CW+O6KwAvPSAHvXoQJIE1jDk4BUFOvpoFp3t54Fv2BSQuAVkoRekvQ5FsQEnTwKpH9l+Dnw1Zk9uAlpytzxi6806lY0g/Mni/I+CQTQMM+mzCpMR5PUfM7Rg6Lp5sxHmI5pqaUcoMhQPPJJNcDKYPsPWtSz4jcNqwh3fHncA6R9KusZ8auvzeB1U4xptWdgPpXJ8OJlfEWp5qVZu1YbU3hEwYjZiLWRn3vYqbph7bC0+jP0ohnFyXIZ/rrhZNHqb/pw/zaY/c0qAuzd62+Dw3TlTWy0RxkhmWb09bjDCD2QDfo7DecsgtAjteCqSj+J6L9/iHUWWdCRbpa3Me3UwtaekfHxrmfl3YCVCB4LZIH+MNdHrHB7RxTZma9BGQ3FgwI+x+fG1HcK2kfa3j3yIALSgjO9uufOc9FxvpIl+anRwsO3LrXglYzVM483LjPW6Ey3yod1MLvEG8cMNQgxp6KlwBa5x5kTgGi/kNI+MYS9naNxpfa3WrCbuZbKRpTI2JOrNcL5Wmkgx9yojz+8E1t7hxkD0FKbI2Zayutqn93MhxnD0VIM9lViwrdEwLWwb3F95XiQb42YerSIRm0NsEORoUi1L0J1QWe6Pa+K5etB+v1bHFMFntW3TEw4VgRXG7TWtjuEjU+rZHlbZMjlVxn1cdvbs51QyfKmyFDCz0wrcE+p47LHt7i1a3jIxTIxxxjBoFqZg5SX7bgdd//5VJ13fGttIIpxItyB+5xOqsu7t8OMslSo6LOja208lO4UuB33Od3U0Hd7X88eqbkg/RJoXUM00Lu1jRCfYTSlQo+3XMdtxYl74Y+4nZFmiD/mxcvtFh7E1M5FYcU9eViSeJnFWfrl860pX9ZkIp674QIMqh5vqP2dC3fnMpvIZsNZy2PtR9WWw8KNQyG+1G6WSUkhvh+6UkVRKUiZdhm15bFwRzzfuJ6UW0yKrWngkbRbjGJvX0GmgMpPkrs1uD7dFvaVwV2GPmq3kftWj/jtYvxi+/y1mDgnr+mEwN/zbpeFRDal+7X3OX7oSU3FO0F0Lgs7Txv0XAExdFGhaiZ8TDyOyYLtVl4ndD6KOL80REHBDN+p0DO9JkqXG5K1vYSCke0GlO57ZEGu2IdeeKjMIEubFZAvn+EFb9wR1LCmZ4NcDFJPyKMsQYQSg1iBwqNtzdhVuUgX0NUSg/hsNRXQWRrUkJ2Dk/WHfiqrvNIZibU8lpKREGS71SorPpPEAiGUGN0TEJHgqb8jpmKdeSSuzXm1G5/ZxQr5XWKUl10nHdeGWe3OJvPBeOrTxCqt6efi2oIOADF5no10sRfWZNu4trDV7pyOBCaGPpqUJXuqIOuOoaxabjIH5Opf/MT+z0wMjTQ2W3JsXNv10I4spSsSyicKaj0FVXnU0y0iVHHHWJWMZI1RCczsQzQ2NMyKMWlpLlF2pTau42YoQ45vEGMS43yikgMDC7sUnc25DM+YJDSfqDh6gYX9ApBffcqYdBzgI3/pfNLXlDQR1LKsv2fhpcopLnfCWFYn9xW3gCCJv8ITDDloI+sE0XXX1XTvUUok1koU/PLku2DpeM/iXiYzrwCMxF9oVsJ6MAX91R0CTIEojH5mZTeisznVQPgEXpP4KWZSbOwBdDaHmhQ+AeZSfkr/FTb2cIBfvhzfkRuql62URwyUKaB6ilhYqmdaxKqmysopoWQtexjYD9qgydj4jszQjkwnY113lOanHukyYq10gYQMp4KcWY8ecBcKcncPIreiXFOPHjEYXkMMlOOQ7Mtpi++oUILAh7rj3yOxFmfJZTBhQhIRI3jRsj4n6Z4MN0Iuv1cPm2kgJIDASAJXLyTAhZEExAsJCGIkgfFH2BPIPIWevMxJuk6splclmZPOO7GiYSrMSVpOrNZ0iYSttVG+iCUz81o5jk895/qJyvIccb116gkdlUoHd8/J3krmAdRzsneReWpcuJFyLn16VNVUpNyJvs9hN1v6X61HR3x64rZxdoBh7E3fbCdmO2h9Q7z9C3dr4dd9qNjEIjfLGJf475Uiv7/Hdmo3957ErCyTN2+sDO6ZXjoZ07KDS2ppUuL44EdICmhxEsSsZGBUrre4Cg59bcRYnZk6mXq6aGVqoPWXYsSKbp/J1yxCzhsjuOLDQWd7bfFn1b233pNFZr8QRtSK1rvC7GZXCHYPBxtrQh8MXrRXLXpeHaod4DR2a5K8vNmEsfu6cru15jVwQg7Mwh9pAvT7W5NhmE6AzwTQ0pXI1n1utZJqURAEcIQsgBUEhUTke3hevjyHMDE3s5IzgSMG5K2MLQZ6VGyVP/YqDMAtle27+04GwZXM++NQxwNLBWQIitKzJJigvHBunoJwm4R+inwy1wVPUebuqDY+b43SV8fY5XNfMWngcpJddGaVVWrjRcGeqqqBbZ7CjsLC4L8alMdBTMB01n9Zc4ZDr8pwmDMceFVmIPxZMCAiH55G40xQPqJfkLEXcec4+PRlVkFjHBMFhvusfN6cqNlDqJ4NT8f2k6Ae03ZVC0upNz0RnxnvvKs8mlqRLhyBekog3ZubUviku99P7ZTvTKHemtjQyHhGvHI6QPvZh+Hzdy8+/mvUvxkRfF7/tILYwZvCPy8Mh1sdvikA4Q8MOeQghxzkkIMcumumQ3etGpEfDbjri128iZ9I1qh5+Y8sl4/eKFvfGZ+BcTOgavVZoN6g6uwiV3JuSJt/PmQoZIHifJdw6sGN6AWfPcrY3dvaLs+2B4vQKSuR28rpX1JWPs3v3Hp/O+r21syS6ZhFTMsJC8z24Hrrxr6v72jZk2bXxhbDxuSWmp8N377XuIZvNQSMNreIvV8jPum6ofXtO/mLy40elusJpjAH9YbM/prACJncS582TFRbO8AEz/gkKaWeIxwpjpnygulPpUOUTniiYN75JJksNQs6WbQJ7q6K+iINzyUFZRLM6Ooo0/+QmSgRWe8e6bQsimfmG1SUKmpWWiuXFJLZYrY8Ohpw8uKTD+Wzfa23b06I3x94oL20HKwevTG1H+v409ngiUJ6yu5s4+D6z5W/tnaed2L2Z+rPFy3eSV6HCtitzlBiNrciNMZH7j5+bTcQuR+6nhDW+HuTtLa7tLBSGn3p9O3Iph9FYm6tEyOOj/ADbi3aRVdwrfdtx7Y2h4a3XcHOcQvbSxvqBQsmPor4x61mUyl+ZdErdlwfZ77v3YrYwOwvrW7M19T46+RcUG8tbDkh9rvry8piOMafRVMLe3926NOnmc09U39Tao/7rfyzNzdWd37ObK7dFt16xlVQ2LNYvitT7TJlX5LKf4wStfWMxzX/FXF46Ln/3BeeZFut6A9YbS73bgDImfPYTrBGTxGK0c6tDkAk3k/zXVv1Z2Qea7JFT7Xs6z5DDJ+iPImmRiuuHfl5Udzze25U8u8B7mDQi6jkZ+C/TuhVFRb/bKtgKR45RZERnlF+C5SHCa+ZkQCazyO/uwLAk+Qa1e9a9VwTduLpUi7bOhZefSdE+BQ4LckgCPKXNdVLyXir9T713eligbHmt1RWwR42Y960HCQ5prjkqUfS9Us9Xj+cpLYHQ9WCWcwsJIXo3a7KGjgzVMuX0w8Kk7MzF+u5YLLkEpmpIBUzbkNcT7gLF7dH5OwCETYVhDx3xBPB5rMsug6lf3YhjkyfXTCUfv3CpAqoSsemhVhZZi3WC/Iem9putQFOXHihWYZK2MnxJNa0UWgxcEhkTR+1j89rCgRDT19STMxr+rWdMa4+Ku2z3CGKXY2A9w1PJzXyHFveOnXVR2E82Rg/qvm4rCMMe0TD4XFlZaAK1OjS2WwfBZf0bvzifpbIiKdLGuu9EJRtVtBJqNYbJlze3UZetuAauo8qwuhl9wu5qh5gHUlgHYesIFHo+TdMzuavXbE8kXBrH9XrepAeX0Ur89dMWOHIx5Y+qrf38VKzeWbmb0SxapFw05Hp8aTu7NEiFZuskONQu0vfKXn533lyg2ucAUAF6nCwSTDCaLo33Ei2queFCK/cbGYFbPaSfl4+Bx8y8gNnqo6Ggzdys7tEndHGpyOdCbW/7qPnHvfj0iO211ANcCWMYl6LzR61L8kD2c99zcmzPPi1DCemY4LZX+RR/7a0gNrx13Pywp+EOZt/1NSvyX/0dtj2hTAAiJog7RBG0n3h26eqKoORUKs3MlbmOTclveg2SLuFZJDJIFB4gkHBtRLHTGIrDC2Fad6DOdJPIWlxau1ZhRU4LhIbKbQSFnUPFkHnR9JSDtBHOHsSW8UqEkm7p6ZLaCmBbWXCqEBDWp5ae05LDWwrC0iBFvkAS/UpUfGOlyse1rehQ8yBPTlR/Do4M/NQaXMdmew8L+O8jyg5JA2v1p7ZPaxvRIegoVb8oih+YzZgaCYsgg+XN2cK1Ez7lCC9GRSelsFEsmHdfIo+JWhvBji+CmdfylbzsiFvziFPx9TTp8TJO17pkT1/mgm/vlNOnpd1HrEnrwrHXMpGrM7Nm7PMi+2tGtZPoDOh7UuBTghH8lWfkvPz8bK+JbD3WYh7ZBMkrSi0PQtpxQ83ETrnFIKkkULBOWHm5qEKrvcwrlb8uyZCXk6A1qeh7TlhruahcFciZmBYv4vO5HTD2pzoNB8vd7YYRi0P1c1yLYNRS0LB2a4lf2JOgSW/l2XDxx6LCjY1Oddaz/sVbKuyrr88y0cgf2bb+DDsooTOjXkj4wRLOQp/WCPjYKUcFT/shyGaOYhuct8IZCsHQSX3ATkBUU++aMc/59yg04ew4p9zbJAwLQgDDZgI6Vd2cBHR8/GwIQqjl1UDqFdpAeScjSBaz4jqHAivamMEtrjco7QE2spCAO7rXOxvEgcpO5eFeqAcNQemyAFLFUbFTiwjDv7A5mwbJPpyxhnnHIBZahugg9nBWpugBgIC8ELasemlHOThMRZqdahutsIOaCsb4aVqfj4WkAC4YG6iwTyDgt0eGFD8i8Su0xagITfWbM+/i2ItNIPyELXY4rJVGcFbWTznchMldFL54mVXBCBe1no6M85HGEIVJLuDZVjAWzk8XrnMkjpdfPGKo1k8RF+2OIKTAEOokmS39TVJnb/54uXsBBlW5SW9VAf0YgVlIJZXnVipJYmxJjlJIE4T1kJbICUmAqI5Dkd5Surc5GOQxwAPyUpGqPb8eQj91Yl1/Eomg8IomaceI8PkVOMpGdhnxk4x+5unXkaWyaHmmmQghyU7pZ/MQ/TAGRNq/uYhOuGMs2uAHI0zziq8Kgko4JXT6jvoB7Vt6NWLZZaBov+JplGEJNAuSr9wVZoD/D4LazyverAO9tw8SpCBIscbSV9RAqRD9UqfADa2nA+vFC0DFORgvea9BQGxvC/oo8BEXxyWUIg5uAy8kusf9Xg5VyAv4sPDtP7Ih1oeTIKb6FeE/tGvX/hPJKwq/WuiLC+e/ucGfKdRaECCgZMUOqowCWTeK1JMB+6AaOMk5bRlAlQo+uqbov/mEQ4IuqmBB/7v66p54Qci0zFpnvOaHOC8HCRf6SMlyJzN239ugWxIPJjlnI3UAwj9Ul2gN3ANtiLZSDLpmhPWJIZseHAPVt7ot9hsxN88YeHbAxwTTZY2pf+sUaEm75to4tanZ6uZg8wsfeIpqbDbK0KjDwHdPJykHLaiBEvo/yxiq0k42vn7Vm5eQNhO29qoKDpL59nQ0lrE2O3x87uNv7Y6YyyGWrsfoVO+PPULF+caQj8b87s9ufNz60zA+dMxEzvNu3c+fFh/fj6y9rl4X/vUniNXxHaIxvDz5zNU/9N9xVM7lBPJA26ETvXmla6v4jtML+eLZ2zL7hOyzNFw2aJJZ4sHYhctwqL8NcKGQvoqiya3g85yDt3s886fbCzwO9P8PL93dTKYPN88Mw2gbMCn0mIxurWgAUCG0YvwcveoAI20oZvPsxbL1gk2uZMXLU43r++2fhnfwIFYAPP4xxEzHfpLpkN/yXToL5kOvSfzIcd8yDEfcsyHHMshx3LIsRxyLAccYPT/+cb7fwAgpdy3
+```
+
+s1
+
+```
+set address -999
+sensor config1 sorter1 @config
+sensor config2 sorter2 @config
+sensor config3 sorter3 @config
+sensor config4 sorter4 @config
+sensor config5 sorter5 @config
+sensor config6 sorter6 @config
+sensor config7 sorter7 @config
+sensor config8 sorter8 @config
+sensor config9 sorter9 @config
+sensor config10 sorter10 @config
+sensor config11 sorter11 @config
+sensor config12 sorter12 @config
+sensor config13 sorter13 @config
+sensor config14 sorter14 @config
+sensor config15 sorter15 @config
+sensor config16 sorter16 @config
+sensor config17 sorter17 @config
+sensor config18 sorter18 @config
+sensor config19 sorter19 @config
+sensor config20 sorter20 @config
+sensor config21 sorter21 @config
+sensor config22 sorter22 @config
+sensor config23 sorter23 @config
+sensor config24 sorter24 @config
+sensor config25 sorter25 @config
+sensor config26 sorter26 @config
+sensor config27 sorter27 @config
+sensor config28 sorter28 @config
+sensor config29 sorter29 @config
+sensor config30 sorter30 @config
+sensor config31 sorter31 @config
+sensor config32 sorter32 @config
+jump 35 notEqual config1 @copper
+set address 0
+jump 37 notEqual config1 @lead
+set address 1
+jump 39 notEqual config1 @metaglass
+set address 2
+jump 41 notEqual config1 @graphite
+set address 3
+jump 43 notEqual config1 @sand
+set address 4
+jump 45 notEqual config1 @coal
+set address 5
+jump 47 notEqual config1 @titanium
+set address 6
+jump 49 notEqual config1 @thorium
+set address 7
+jump 51 notEqual config1 @scrap
+set address 8
+jump 53 notEqual config1 @silicon
+set address 9
+jump 55 notEqual config1 @plastanium
+set address 10
+jump 57 notEqual config1 @phase-fabric
+set address 11
+jump 59 notEqual config1 @surge-alloy
+set address 12
+jump 61 notEqual config1 @spore-pod
+set address 13
+jump 63 notEqual config1 @blast-compound
+set address 14
+jump 65 notEqual config1 @pyratite
+set address 15
+jump 67 notEqual config2 @copper
+set address 16
+jump 69 notEqual config2 @lead
+set address 17
+jump 71 notEqual config2 @metaglass
+set address 18
+jump 73 notEqual config2 @graphite
+set address 19
+jump 75 notEqual config2 @sand
+set address 20
+jump 77 notEqual config2 @coal
+set address 21
+jump 79 notEqual config2 @titanium
+set address 22
+jump 81 notEqual config2 @thorium
+set address 23
+jump 83 notEqual config2 @scrap
+set address 24
+jump 85 notEqual config2 @silicon
+set address 25
+jump 87 notEqual config2 @plastanium
+set address 26
+jump 89 notEqual config2 @phase-fabric
+set address 27
+jump 91 notEqual config2 @surge-alloy
+set address 28
+jump 93 notEqual config2 @spore-pod
+set address 29
+jump 95 notEqual config2 @blast-compound
+set address 30
+jump 97 notEqual config2 @pyratite
+set address 31
+jump 99 notEqual config3 @copper
+set address 32
+jump 101 notEqual config3 @lead
+set address 33
+jump 103 notEqual config3 @metaglass
+set address 34
+jump 105 notEqual config3 @graphite
+set address 35
+jump 107 notEqual config3 @sand
+set address 36
+jump 109 notEqual config3 @coal
+set address 37
+jump 111 notEqual config3 @titanium
+set address 38
+jump 113 notEqual config3 @thorium
+set address 39
+jump 115 notEqual config3 @scrap
+set address 40
+jump 117 notEqual config3 @silicon
+set address 41
+jump 119 notEqual config3 @plastanium
+set address 42
+jump 121 notEqual config3 @phase-fabric
+set address 43
+jump 123 notEqual config3 @surge-alloy
+set address 44
+jump 125 notEqual config3 @spore-pod
+set address 45
+jump 127 notEqual config3 @blast-compound
+set address 46
+jump 129 notEqual config3 @pyratite
+set address 47
+jump 131 notEqual config4 @copper
+set address 48
+jump 133 notEqual config4 @lead
+set address 49
+jump 135 notEqual config4 @metaglass
+set address 50
+jump 137 notEqual config4 @graphite
+set address 51
+jump 139 notEqual config4 @sand
+set address 52
+jump 141 notEqual config4 @coal
+set address 53
+jump 143 notEqual config4 @titanium
+set address 54
+jump 145 notEqual config4 @thorium
+set address 55
+jump 147 notEqual config4 @scrap
+set address 56
+jump 149 notEqual config4 @silicon
+set address 57
+jump 151 notEqual config4 @plastanium
+set address 58
+jump 153 notEqual config4 @phase-fabric
+set address 59
+jump 155 notEqual config4 @surge-alloy
+set address 60
+jump 157 notEqual config4 @spore-pod
+set address 61
+jump 159 notEqual config4 @blast-compound
+set address 62
+jump 161 notEqual config4 @pyratite
+set address 63
+jump 163 notEqual config5 @copper
+set address 64
+jump 165 notEqual config5 @lead
+set address 65
+jump 167 notEqual config5 @metaglass
+set address 66
+jump 169 notEqual config5 @graphite
+set address 67
+jump 171 notEqual config5 @sand
+set address 68
+jump 173 notEqual config5 @coal
+set address 69
+jump 175 notEqual config5 @titanium
+set address 70
+jump 177 notEqual config5 @thorium
+set address 71
+jump 179 notEqual config5 @scrap
+set address 72
+jump 181 notEqual config5 @silicon
+set address 73
+jump 183 notEqual config5 @plastanium
+set address 74
+jump 185 notEqual config5 @phase-fabric
+set address 75
+jump 187 notEqual config5 @surge-alloy
+set address 76
+jump 189 notEqual config5 @spore-pod
+set address 77
+jump 191 notEqual config5 @blast-compound
+set address 78
+jump 193 notEqual config5 @pyratite
+set address 79
+jump 195 notEqual config6 @copper
+set address 80
+jump 197 notEqual config6 @lead
+set address 81
+jump 199 notEqual config6 @metaglass
+set address 82
+jump 201 notEqual config6 @graphite
+set address 83
+jump 203 notEqual config6 @sand
+set address 84
+jump 205 notEqual config6 @coal
+set address 85
+jump 207 notEqual config6 @titanium
+set address 86
+jump 209 notEqual config6 @thorium
+set address 87
+jump 211 notEqual config6 @scrap
+set address 88
+jump 213 notEqual config6 @silicon
+set address 89
+jump 215 notEqual config6 @plastanium
+set address 90
+jump 217 notEqual config6 @phase-fabric
+set address 91
+jump 219 notEqual config6 @surge-alloy
+set address 92
+jump 221 notEqual config6 @spore-pod
+set address 93
+jump 223 notEqual config6 @blast-compound
+set address 94
+jump 225 notEqual config6 @pyratite
+set address 95
+jump 227 notEqual config7 @copper
+set address 96
+jump 229 notEqual config7 @lead
+set address 97
+jump 231 notEqual config7 @metaglass
+set address 98
+jump 233 notEqual config7 @graphite
+set address 99
+jump 235 notEqual config7 @sand
+set address 100
+jump 237 notEqual config7 @coal
+set address 101
+jump 239 notEqual config7 @titanium
+set address 102
+jump 241 notEqual config7 @thorium
+set address 103
+jump 243 notEqual config7 @scrap
+set address 104
+jump 245 notEqual config7 @silicon
+set address 105
+jump 247 notEqual config7 @plastanium
+set address 106
+jump 249 notEqual config7 @phase-fabric
+set address 107
+jump 251 notEqual config7 @surge-alloy
+set address 108
+jump 253 notEqual config7 @spore-pod
+set address 109
+jump 255 notEqual config7 @blast-compound
+set address 110
+jump 257 notEqual config7 @pyratite
+set address 111
+jump 259 notEqual config8 @copper
+set address 112
+jump 261 notEqual config8 @lead
+set address 113
+jump 263 notEqual config8 @metaglass
+set address 114
+jump 265 notEqual config8 @graphite
+set address 115
+jump 267 notEqual config8 @sand
+set address 116
+jump 269 notEqual config8 @coal
+set address 117
+jump 271 notEqual config8 @titanium
+set address 118
+jump 273 notEqual config8 @thorium
+set address 119
+jump 275 notEqual config8 @scrap
+set address 120
+jump 277 notEqual config8 @silicon
+set address 121
+jump 279 notEqual config8 @plastanium
+set address 122
+jump 281 notEqual config8 @phase-fabric
+set address 123
+jump 283 notEqual config8 @surge-alloy
+set address 124
+jump 285 notEqual config8 @spore-pod
+set address 125
+jump 287 notEqual config8 @blast-compound
+set address 126
+jump 289 notEqual config8 @pyratite
+set address 127
+jump 291 notEqual config9 @copper
+set address 128
+jump 293 notEqual config9 @lead
+set address 129
+jump 295 notEqual config9 @metaglass
+set address 130
+jump 297 notEqual config9 @graphite
+set address 131
+jump 299 notEqual config9 @sand
+set address 132
+jump 301 notEqual config9 @coal
+set address 133
+jump 303 notEqual config9 @titanium
+set address 134
+jump 305 notEqual config9 @thorium
+set address 135
+jump 307 notEqual config9 @scrap
+set address 136
+jump 309 notEqual config9 @silicon
+set address 137
+jump 311 notEqual config9 @plastanium
+set address 138
+jump 313 notEqual config9 @phase-fabric
+set address 139
+jump 315 notEqual config9 @surge-alloy
+set address 140
+jump 317 notEqual config9 @spore-pod
+set address 141
+jump 319 notEqual config9 @blast-compound
+set address 142
+jump 321 notEqual config9 @pyratite
+set address 143
+jump 323 notEqual config10 @copper
+set address 144
+jump 325 notEqual config10 @lead
+set address 145
+jump 327 notEqual config10 @metaglass
+set address 146
+jump 329 notEqual config10 @graphite
+set address 147
+jump 331 notEqual config10 @sand
+set address 148
+jump 333 notEqual config10 @coal
+set address 149
+jump 335 notEqual config10 @titanium
+set address 150
+jump 337 notEqual config10 @thorium
+set address 151
+jump 339 notEqual config10 @scrap
+set address 152
+jump 341 notEqual config10 @silicon
+set address 153
+jump 343 notEqual config10 @plastanium
+set address 154
+jump 345 notEqual config10 @phase-fabric
+set address 155
+jump 347 notEqual config10 @surge-alloy
+set address 156
+jump 349 notEqual config10 @spore-pod
+set address 157
+jump 351 notEqual config10 @blast-compound
+set address 158
+jump 353 notEqual config10 @pyratite
+set address 159
+jump 355 notEqual config11 @copper
+set address 160
+jump 357 notEqual config11 @lead
+set address 161
+jump 359 notEqual config11 @metaglass
+set address 162
+jump 361 notEqual config11 @graphite
+set address 163
+jump 363 notEqual config11 @sand
+set address 164
+jump 365 notEqual config11 @coal
+set address 165
+jump 367 notEqual config11 @titanium
+set address 166
+jump 369 notEqual config11 @thorium
+set address 167
+jump 371 notEqual config11 @scrap
+set address 168
+jump 373 notEqual config11 @silicon
+set address 169
+jump 375 notEqual config11 @plastanium
+set address 170
+jump 377 notEqual config11 @phase-fabric
+set address 171
+jump 379 notEqual config11 @surge-alloy
+set address 172
+jump 381 notEqual config11 @spore-pod
+set address 173
+jump 383 notEqual config11 @blast-compound
+set address 174
+jump 385 notEqual config11 @pyratite
+set address 175
+jump 387 notEqual config12 @copper
+set address 176
+jump 389 notEqual config12 @lead
+set address 177
+jump 391 notEqual config12 @metaglass
+set address 178
+jump 393 notEqual config12 @graphite
+set address 179
+jump 395 notEqual config12 @sand
+set address 180
+jump 397 notEqual config12 @coal
+set address 181
+jump 399 notEqual config12 @titanium
+set address 182
+jump 401 notEqual config12 @thorium
+set address 183
+jump 403 notEqual config12 @scrap
+set address 184
+jump 405 notEqual config12 @silicon
+set address 185
+jump 407 notEqual config12 @plastanium
+set address 186
+jump 409 notEqual config12 @phase-fabric
+set address 187
+jump 411 notEqual config12 @surge-alloy
+set address 188
+jump 413 notEqual config12 @spore-pod
+set address 189
+jump 415 notEqual config12 @blast-compound
+set address 190
+jump 417 notEqual config12 @pyratite
+set address 191
+jump 419 notEqual config13 @copper
+set address 192
+jump 421 notEqual config13 @lead
+set address 193
+jump 423 notEqual config13 @metaglass
+set address 194
+jump 425 notEqual config13 @graphite
+set address 195
+jump 427 notEqual config13 @sand
+set address 196
+jump 429 notEqual config13 @coal
+set address 197
+jump 431 notEqual config13 @titanium
+set address 198
+jump 433 notEqual config13 @thorium
+set address 199
+jump 435 notEqual config13 @scrap
+set address 200
+jump 437 notEqual config13 @silicon
+set address 201
+jump 439 notEqual config13 @plastanium
+set address 202
+jump 441 notEqual config13 @phase-fabric
+set address 203
+jump 443 notEqual config13 @surge-alloy
+set address 204
+jump 445 notEqual config13 @spore-pod
+set address 205
+jump 447 notEqual config13 @blast-compound
+set address 206
+jump 449 notEqual config13 @pyratite
+set address 207
+jump 451 notEqual config14 @copper
+set address 208
+jump 453 notEqual config14 @lead
+set address 209
+jump 455 notEqual config14 @metaglass
+set address 210
+jump 457 notEqual config14 @graphite
+set address 211
+jump 459 notEqual config14 @sand
+set address 212
+jump 461 notEqual config14 @coal
+set address 213
+jump 463 notEqual config14 @titanium
+set address 214
+jump 465 notEqual config14 @thorium
+set address 215
+jump 467 notEqual config14 @scrap
+set address 216
+jump 469 notEqual config14 @silicon
+set address 217
+jump 471 notEqual config14 @plastanium
+set address 218
+jump 473 notEqual config14 @phase-fabric
+set address 219
+jump 475 notEqual config14 @surge-alloy
+set address 220
+jump 477 notEqual config14 @spore-pod
+set address 221
+jump 479 notEqual config14 @blast-compound
+set address 222
+jump 481 notEqual config14 @pyratite
+set address 223
+jump 483 notEqual config15 @copper
+set address 224
+jump 485 notEqual config15 @lead
+set address 225
+jump 487 notEqual config15 @metaglass
+set address 226
+jump 489 notEqual config15 @graphite
+set address 227
+jump 491 notEqual config15 @sand
+set address 228
+jump 493 notEqual config15 @coal
+set address 229
+jump 495 notEqual config15 @titanium
+set address 230
+jump 497 notEqual config15 @thorium
+set address 231
+jump 499 notEqual config15 @scrap
+set address 232
+jump 501 notEqual config15 @silicon
+set address 233
+jump 503 notEqual config15 @plastanium
+set address 234
+jump 505 notEqual config15 @phase-fabric
+set address 235
+jump 507 notEqual config15 @surge-alloy
+set address 236
+jump 509 notEqual config15 @spore-pod
+set address 237
+jump 511 notEqual config15 @blast-compound
+set address 238
+jump 513 notEqual config15 @pyratite
+set address 239
+jump 515 notEqual config16 @copper
+set address 240
+jump 517 notEqual config16 @lead
+set address 241
+jump 519 notEqual config16 @metaglass
+set address 242
+jump 521 notEqual config16 @graphite
+set address 243
+jump 523 notEqual config16 @sand
+set address 244
+jump 525 notEqual config16 @coal
+set address 245
+jump 527 notEqual config16 @titanium
+set address 246
+jump 529 notEqual config16 @thorium
+set address 247
+jump 531 notEqual config16 @scrap
+set address 248
+jump 533 notEqual config16 @silicon
+set address 249
+jump 535 notEqual config16 @plastanium
+set address 250
+jump 537 notEqual config16 @phase-fabric
+set address 251
+jump 539 notEqual config16 @surge-alloy
+set address 252
+jump 541 notEqual config16 @spore-pod
+set address 253
+jump 543 notEqual config16 @blast-compound
+set address 254
+jump 545 notEqual config16 @pyratite
+set address 255
+jump 548 strictEqual address -999
+read result bank1 address
+write result cell1 0
+end
+```
+
+s2
+
+```
+set address -999
+sensor config1 sorter1 @config
+sensor config2 sorter2 @config
+sensor config3 sorter3 @config
+sensor config4 sorter4 @config
+sensor config5 sorter5 @config
+sensor config6 sorter6 @config
+sensor config7 sorter7 @config
+sensor config8 sorter8 @config
+sensor config9 sorter9 @config
+sensor config10 sorter10 @config
+sensor config11 sorter11 @config
+sensor config12 sorter12 @config
+sensor config13 sorter13 @config
+sensor config14 sorter14 @config
+sensor config15 sorter15 @config
+sensor config16 sorter16 @config
+sensor config17 sorter17 @config
+sensor config18 sorter18 @config
+sensor config19 sorter19 @config
+sensor config20 sorter20 @config
+sensor config21 sorter21 @config
+sensor config22 sorter22 @config
+sensor config23 sorter23 @config
+sensor config24 sorter24 @config
+sensor config25 sorter25 @config
+sensor config26 sorter26 @config
+sensor config27 sorter27 @config
+sensor config28 sorter28 @config
+sensor config29 sorter29 @config
+sensor config30 sorter30 @config
+sensor config31 sorter31 @config
+sensor config32 sorter32 @config
+jump 35 notEqual config17 @copper
+set address 256
+jump 37 notEqual config17 @lead
+set address 257
+jump 39 notEqual config17 @metaglass
+set address 258
+jump 41 notEqual config17 @graphite
+set address 259
+jump 43 notEqual config17 @sand
+set address 260
+jump 45 notEqual config17 @coal
+set address 261
+jump 47 notEqual config17 @titanium
+set address 262
+jump 49 notEqual config17 @thorium
+set address 263
+jump 51 notEqual config17 @scrap
+set address 264
+jump 53 notEqual config17 @silicon
+set address 265
+jump 55 notEqual config17 @plastanium
+set address 266
+jump 57 notEqual config17 @phase-fabric
+set address 267
+jump 59 notEqual config17 @surge-alloy
+set address 268
+jump 61 notEqual config17 @spore-pod
+set address 269
+jump 63 notEqual config17 @blast-compound
+set address 270
+jump 65 notEqual config17 @pyratite
+set address 271
+jump 67 notEqual config18 @copper
+set address 272
+jump 69 notEqual config18 @lead
+set address 273
+jump 71 notEqual config18 @metaglass
+set address 274
+jump 73 notEqual config18 @graphite
+set address 275
+jump 75 notEqual config18 @sand
+set address 276
+jump 77 notEqual config18 @coal
+set address 277
+jump 79 notEqual config18 @titanium
+set address 278
+jump 81 notEqual config18 @thorium
+set address 279
+jump 83 notEqual config18 @scrap
+set address 280
+jump 85 notEqual config18 @silicon
+set address 281
+jump 87 notEqual config18 @plastanium
+set address 282
+jump 89 notEqual config18 @phase-fabric
+set address 283
+jump 91 notEqual config18 @surge-alloy
+set address 284
+jump 93 notEqual config18 @spore-pod
+set address 285
+jump 95 notEqual config18 @blast-compound
+set address 286
+jump 97 notEqual config18 @pyratite
+set address 287
+jump 99 notEqual config19 @copper
+set address 288
+jump 101 notEqual config19 @lead
+set address 289
+jump 103 notEqual config19 @metaglass
+set address 290
+jump 105 notEqual config19 @graphite
+set address 291
+jump 107 notEqual config19 @sand
+set address 292
+jump 109 notEqual config19 @coal
+set address 293
+jump 111 notEqual config19 @titanium
+set address 294
+jump 113 notEqual config19 @thorium
+set address 295
+jump 115 notEqual config19 @scrap
+set address 296
+jump 117 notEqual config19 @silicon
+set address 297
+jump 119 notEqual config19 @plastanium
+set address 298
+jump 121 notEqual config19 @phase-fabric
+set address 299
+jump 123 notEqual config19 @surge-alloy
+set address 300
+jump 125 notEqual config19 @spore-pod
+set address 301
+jump 127 notEqual config19 @blast-compound
+set address 302
+jump 129 notEqual config19 @pyratite
+set address 303
+jump 131 notEqual config20 @copper
+set address 304
+jump 133 notEqual config20 @lead
+set address 305
+jump 135 notEqual config20 @metaglass
+set address 306
+jump 137 notEqual config20 @graphite
+set address 307
+jump 139 notEqual config20 @sand
+set address 308
+jump 141 notEqual config20 @coal
+set address 309
+jump 143 notEqual config20 @titanium
+set address 310
+jump 145 notEqual config20 @thorium
+set address 311
+jump 147 notEqual config20 @scrap
+set address 312
+jump 149 notEqual config20 @silicon
+set address 313
+jump 151 notEqual config20 @plastanium
+set address 314
+jump 153 notEqual config20 @phase-fabric
+set address 315
+jump 155 notEqual config20 @surge-alloy
+set address 316
+jump 157 notEqual config20 @spore-pod
+set address 317
+jump 159 notEqual config20 @blast-compound
+set address 318
+jump 161 notEqual config20 @pyratite
+set address 319
+jump 163 notEqual config21 @copper
+set address 320
+jump 165 notEqual config21 @lead
+set address 321
+jump 167 notEqual config21 @metaglass
+set address 322
+jump 169 notEqual config21 @graphite
+set address 323
+jump 171 notEqual config21 @sand
+set address 324
+jump 173 notEqual config21 @coal
+set address 325
+jump 175 notEqual config21 @titanium
+set address 326
+jump 177 notEqual config21 @thorium
+set address 327
+jump 179 notEqual config21 @scrap
+set address 328
+jump 181 notEqual config21 @silicon
+set address 329
+jump 183 notEqual config21 @plastanium
+set address 330
+jump 185 notEqual config21 @phase-fabric
+set address 331
+jump 187 notEqual config21 @surge-alloy
+set address 332
+jump 189 notEqual config21 @spore-pod
+set address 333
+jump 191 notEqual config21 @blast-compound
+set address 334
+jump 193 notEqual config21 @pyratite
+set address 335
+jump 195 notEqual config22 @copper
+set address 336
+jump 197 notEqual config22 @lead
+set address 337
+jump 199 notEqual config22 @metaglass
+set address 338
+jump 201 notEqual config22 @graphite
+set address 339
+jump 203 notEqual config22 @sand
+set address 340
+jump 205 notEqual config22 @coal
+set address 341
+jump 207 notEqual config22 @titanium
+set address 342
+jump 209 notEqual config22 @thorium
+set address 343
+jump 211 notEqual config22 @scrap
+set address 344
+jump 213 notEqual config22 @silicon
+set address 345
+jump 215 notEqual config22 @plastanium
+set address 346
+jump 217 notEqual config22 @phase-fabric
+set address 347
+jump 219 notEqual config22 @surge-alloy
+set address 348
+jump 221 notEqual config22 @spore-pod
+set address 349
+jump 223 notEqual config22 @blast-compound
+set address 350
+jump 225 notEqual config22 @pyratite
+set address 351
+jump 227 notEqual config23 @copper
+set address 352
+jump 229 notEqual config23 @lead
+set address 353
+jump 231 notEqual config23 @metaglass
+set address 354
+jump 233 notEqual config23 @graphite
+set address 355
+jump 235 notEqual config23 @sand
+set address 356
+jump 237 notEqual config23 @coal
+set address 357
+jump 239 notEqual config23 @titanium
+set address 358
+jump 241 notEqual config23 @thorium
+set address 359
+jump 243 notEqual config23 @scrap
+set address 360
+jump 245 notEqual config23 @silicon
+set address 361
+jump 247 notEqual config23 @plastanium
+set address 362
+jump 249 notEqual config23 @phase-fabric
+set address 363
+jump 251 notEqual config23 @surge-alloy
+set address 364
+jump 253 notEqual config23 @spore-pod
+set address 365
+jump 255 notEqual config23 @blast-compound
+set address 366
+jump 257 notEqual config23 @pyratite
+set address 367
+jump 259 notEqual config24 @copper
+set address 368
+jump 261 notEqual config24 @lead
+set address 369
+jump 263 notEqual config24 @metaglass
+set address 370
+jump 265 notEqual config24 @graphite
+set address 371
+jump 267 notEqual config24 @sand
+set address 372
+jump 269 notEqual config24 @coal
+set address 373
+jump 271 notEqual config24 @titanium
+set address 374
+jump 273 notEqual config24 @thorium
+set address 375
+jump 275 notEqual config24 @scrap
+set address 376
+jump 277 notEqual config24 @silicon
+set address 377
+jump 279 notEqual config24 @plastanium
+set address 378
+jump 281 notEqual config24 @phase-fabric
+set address 379
+jump 283 notEqual config24 @surge-alloy
+set address 380
+jump 285 notEqual config24 @spore-pod
+set address 381
+jump 287 notEqual config24 @blast-compound
+set address 382
+jump 289 notEqual config24 @pyratite
+set address 383
+jump 291 notEqual config25 @copper
+set address 384
+jump 293 notEqual config25 @lead
+set address 385
+jump 295 notEqual config25 @metaglass
+set address 386
+jump 297 notEqual config25 @graphite
+set address 387
+jump 299 notEqual config25 @sand
+set address 388
+jump 301 notEqual config25 @coal
+set address 389
+jump 303 notEqual config25 @titanium
+set address 390
+jump 305 notEqual config25 @thorium
+set address 391
+jump 307 notEqual config25 @scrap
+set address 392
+jump 309 notEqual config25 @silicon
+set address 393
+jump 311 notEqual config25 @plastanium
+set address 394
+jump 313 notEqual config25 @phase-fabric
+set address 395
+jump 315 notEqual config25 @surge-alloy
+set address 396
+jump 317 notEqual config25 @spore-pod
+set address 397
+jump 319 notEqual config25 @blast-compound
+set address 398
+jump 321 notEqual config25 @pyratite
+set address 399
+jump 323 notEqual config26 @copper
+set address 400
+jump 325 notEqual config26 @lead
+set address 401
+jump 327 notEqual config26 @metaglass
+set address 402
+jump 329 notEqual config26 @graphite
+set address 403
+jump 331 notEqual config26 @sand
+set address 404
+jump 333 notEqual config26 @coal
+set address 405
+jump 335 notEqual config26 @titanium
+set address 406
+jump 337 notEqual config26 @thorium
+set address 407
+jump 339 notEqual config26 @scrap
+set address 408
+jump 341 notEqual config26 @silicon
+set address 409
+jump 343 notEqual config26 @plastanium
+set address 410
+jump 345 notEqual config26 @phase-fabric
+set address 411
+jump 347 notEqual config26 @surge-alloy
+set address 412
+jump 349 notEqual config26 @spore-pod
+set address 413
+jump 351 notEqual config26 @blast-compound
+set address 414
+jump 353 notEqual config26 @pyratite
+set address 415
+jump 355 notEqual config27 @copper
+set address 416
+jump 357 notEqual config27 @lead
+set address 417
+jump 359 notEqual config27 @metaglass
+set address 418
+jump 361 notEqual config27 @graphite
+set address 419
+jump 363 notEqual config27 @sand
+set address 420
+jump 365 notEqual config27 @coal
+set address 421
+jump 367 notEqual config27 @titanium
+set address 422
+jump 369 notEqual config27 @thorium
+set address 423
+jump 371 notEqual config27 @scrap
+set address 424
+jump 373 notEqual config27 @silicon
+set address 425
+jump 375 notEqual config27 @plastanium
+set address 426
+jump 377 notEqual config27 @phase-fabric
+set address 427
+jump 379 notEqual config27 @surge-alloy
+set address 428
+jump 381 notEqual config27 @spore-pod
+set address 429
+jump 383 notEqual config27 @blast-compound
+set address 430
+jump 385 notEqual config27 @pyratite
+set address 431
+jump 387 notEqual config28 @copper
+set address 432
+jump 389 notEqual config28 @lead
+set address 433
+jump 391 notEqual config28 @metaglass
+set address 434
+jump 393 notEqual config28 @graphite
+set address 435
+jump 395 notEqual config28 @sand
+set address 436
+jump 397 notEqual config28 @coal
+set address 437
+jump 399 notEqual config28 @titanium
+set address 438
+jump 401 notEqual config28 @thorium
+set address 439
+jump 403 notEqual config28 @scrap
+set address 440
+jump 405 notEqual config28 @silicon
+set address 441
+jump 407 notEqual config28 @plastanium
+set address 442
+jump 409 notEqual config28 @phase-fabric
+set address 443
+jump 411 notEqual config28 @surge-alloy
+set address 444
+jump 413 notEqual config28 @spore-pod
+set address 445
+jump 415 notEqual config28 @blast-compound
+set address 446
+jump 417 notEqual config28 @pyratite
+set address 447
+jump 419 notEqual config29 @copper
+set address 448
+jump 421 notEqual config29 @lead
+set address 449
+jump 423 notEqual config29 @metaglass
+set address 450
+jump 425 notEqual config29 @graphite
+set address 451
+jump 427 notEqual config29 @sand
+set address 452
+jump 429 notEqual config29 @coal
+set address 453
+jump 431 notEqual config29 @titanium
+set address 454
+jump 433 notEqual config29 @thorium
+set address 455
+jump 435 notEqual config29 @scrap
+set address 456
+jump 437 notEqual config29 @silicon
+set address 457
+jump 439 notEqual config29 @plastanium
+set address 458
+jump 441 notEqual config29 @phase-fabric
+set address 459
+jump 443 notEqual config29 @surge-alloy
+set address 460
+jump 445 notEqual config29 @spore-pod
+set address 461
+jump 447 notEqual config29 @blast-compound
+set address 462
+jump 449 notEqual config29 @pyratite
+set address 463
+jump 451 notEqual config30 @copper
+set address 464
+jump 453 notEqual config30 @lead
+set address 465
+jump 455 notEqual config30 @metaglass
+set address 466
+jump 457 notEqual config30 @graphite
+set address 467
+jump 459 notEqual config30 @sand
+set address 468
+jump 461 notEqual config30 @coal
+set address 469
+jump 463 notEqual config30 @titanium
+set address 470
+jump 465 notEqual config30 @thorium
+set address 471
+jump 467 notEqual config30 @scrap
+set address 472
+jump 469 notEqual config30 @silicon
+set address 473
+jump 471 notEqual config30 @plastanium
+set address 474
+jump 473 notEqual config30 @phase-fabric
+set address 475
+jump 475 notEqual config30 @surge-alloy
+set address 476
+jump 477 notEqual config30 @spore-pod
+set address 477
+jump 479 notEqual config30 @blast-compound
+set address 478
+jump 481 notEqual config30 @pyratite
+set address 479
+jump 483 notEqual config31 @copper
+set address 480
+jump 485 notEqual config31 @lead
+set address 481
+jump 487 notEqual config31 @metaglass
+set address 482
+jump 489 notEqual config31 @graphite
+set address 483
+jump 491 notEqual config31 @sand
+set address 484
+jump 493 notEqual config31 @coal
+set address 485
+jump 495 notEqual config31 @titanium
+set address 486
+jump 497 notEqual config31 @thorium
+set address 487
+jump 499 notEqual config31 @scrap
+set address 488
+jump 501 notEqual config31 @silicon
+set address 489
+jump 503 notEqual config31 @plastanium
+set address 490
+jump 505 notEqual config31 @phase-fabric
+set address 491
+jump 507 notEqual config31 @surge-alloy
+set address 492
+jump 509 notEqual config31 @spore-pod
+set address 493
+jump 511 notEqual config31 @blast-compound
+set address 494
+jump 513 notEqual config31 @pyratite
+set address 495
+jump 515 notEqual config32 @copper
+set address 496
+jump 517 notEqual config32 @lead
+set address 497
+jump 519 notEqual config32 @metaglass
+set address 498
+jump 521 notEqual config32 @graphite
+set address 499
+jump 523 notEqual config32 @sand
+set address 500
+jump 525 notEqual config32 @coal
+set address 501
+jump 527 notEqual config32 @titanium
+set address 502
+jump 529 notEqual config32 @thorium
+set address 503
+jump 531 notEqual config32 @scrap
+set address 504
+jump 533 notEqual config32 @silicon
+set address 505
+jump 535 notEqual config32 @plastanium
+set address 506
+jump 537 notEqual config32 @phase-fabric
+set address 507
+jump 539 notEqual config32 @surge-alloy
+set address 508
+jump 541 notEqual config32 @spore-pod
+set address 509
+jump 543 notEqual config32 @blast-compound
+set address 510
+jump 545 notEqual config32 @pyratite
+set address 511
+jump 548 strictEqual address -999
+read result bank1 address
+write result cell1 0
+end
+```
+
+s3
+
+```
+read result cell1 0
+jump 3 notEqual result 0
+draw clear 255 0 0 0 0 0
+jump 5 notEqual result 1
+draw clear 0 255 0 0 0 0
+drawflush display1
+```
+
+s4
 
 ```
 set p 1
