@@ -2170,9 +2170,21 @@ op add p p 1
 jump 1 lessThan p @links
 ```
 
-## Пример реализации панели и клиента
+## SBBus Instant
+
+![](./instant__example.png)
+
+Версия SBBus - SBBus Instant - на 1 канал для молниеносной передачи данных. На каждый канал требуется панель, клиент и отдельная линия передатчиков, но ячейки памяти могут быть общими.
+
+Элементы управления отсутствуют ради ускорения обработки данных, настройка производится через редактирование кода.
 
 ### Панель
+
+```
+bXNjaAF4nGNgZGBmZmDJS8xNZZC6MP/Chgt7L2y9sPtij0Kwk1NpsYJnXnFJYl4JA3dKanFyUWZBSWZ+HgMDA1tOYlJqTjEDS3RuZSwzA3duam5+UaVucmpODgNbcXlmSXIGA39uZnJRvm5BUX5yanFxfhFQGzMDBDCCMBcDAxOQZuIDEtEVc5JTEhI+aPjpBhaUFHIW8fKFGTzQ8jurfU4/SMNLV++sZqCG3nkdz3MGIQUeZ719Tnn6PtTSP6Xj2XpSbfmzJxKHvhQxnk1KSmDtNjT48//4Ab6rPE/+sDMs9FHUZwAAlzZMOQ==
+```
+
+s1
 
 ```
 set ADDRESS 0
@@ -2180,7 +2192,27 @@ sensor result switch1 @enabled
 write result cell1 ADDRESS
 ```
 
+### Передатчик
+
+```
+bXNjaAF4nGNgYmBiZmDJS8xNZVC6MP/C1osNF7Ze2HJhw8Wmi+0XdlzYpRDs5FRarOCZV1ySmFfCwJ2SWpxclFlQkpmfx8DAwJaTmJSaU8zAEp1bGcvIwJ+Tn56ZrFtQlJ+cWlycXwRUwcgAAnxAbFMxJzklIaFAz083sKCkkLOIly/M4IGWl69PoIaXrt5ZzUAPv7MnDVtOFk4VT522RMlb8uDShmMGDAxOvqIzGQBUBTpH
+```
+
+s1
+
+```
+set ADDRESS 0
+read result cell1 ADDRESS
+write result cell2 ADDRESS
+```
+
 ### Клиент
+
+```
+bXNjaAF4nGNgZGBkZmDJS8xNZZC6MOvC7gs7Lmy9sPdik0Kwk1NpsYJnXnFJYl4JA3dKanFyUWZBSWZ+HgMDA1tOYlJqTjEDS3RuZSwjA39uZnJRvm5BUX5yanFxfhFQBSMDCPABsU/FnOSUhIQPmn66gQUlhZxFvHxhBg+0vHx9AjW8dPXOagZ6+J09adhyslD1+fOpIk+fayx5pqr2dMkyDRGGUFHpQ1ekGhTEL9iwMRjUSexkAADJXzyO
+```
+
+s1
 
 ```
 set ADDRESS 0
