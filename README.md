@@ -5,7 +5,7 @@
 Существуют версии
 - [1 канал (SBBus Instant)](#sbbus-instant)
 - [4 каналов (SBBus Mini)](#sbbus-mini)
-- [32 канала (SBBus)](#sbbus)
+- [32 канала (SBBus)](#sbbus-1)
 - [256 каналов (SBBus 256)](#sbbus-256)
 - [512 каналов (SBBus 512)](#sbbus-512)
 
