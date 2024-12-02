@@ -2170,6 +2170,24 @@ op add p p 1
 jump 1 lessThan p @links
 ```
 
+## Пример реализации панели и клиента
+
+### Панель
+
+```
+set ADDRESS 0
+sensor result switch1 @enabled
+write result cell1 ADDRESS
+```
+
+### Клиент
+
+```
+set ADDRESS 0
+read result cell1 ADDRESS
+control enabled press1 result 0 0 0
+```
+
 ## dev
 
 mlogjs набросок
