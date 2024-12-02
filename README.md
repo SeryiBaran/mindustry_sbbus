@@ -3,11 +3,11 @@
 Шина переключателей для Mindustry 7+. Проверено и работает в кампании и на сервере.
 
 Существуют версии
-- [1 канал (SBBus Instant)](#SBBus_Instant)
-- [4 каналов (SBBus Mini)](#SBBus_Mini)
-- [32 канала (SBBus)](#SBBus)
-- [256 каналов (SBBus 256)](#SBBus_256)
-- [512 каналов (SBBus 512)](#SBBus_512)
+- [1 канал (SBBus Instant)](#sbbus-instant)
+- [4 каналов (SBBus Mini)](#sbbus-mini)
+- [32 канала (SBBus)](#sbbus)
+- [256 каналов (SBBus 256)](#sbbus-256)
+- [512 каналов (SBBus 512)](#sbbus-512)
 
 Версия на 1 канал самая молниеносная из всех.
 
